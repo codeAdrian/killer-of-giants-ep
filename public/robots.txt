@@ -32,5 +32,3 @@ User-agent: Omgili
 Disallow: /
 User-agent: YouBot
 Disallow: /
-User-agent: *
-Disallow: /
