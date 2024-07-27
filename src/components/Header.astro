@@ -1,0 +1,134 @@
+---
+import NavLink from "./NavLink.astro";
+import imageOne from "../assets/graphics/1.png";
+import imageTwo from "../assets/graphics/2.png";
+import imageThree from "../assets/graphics/3.png";
+import imageFour from "../assets/graphics/4.png";
+import imageFive from "../assets/graphics/5.png";
+import { Image } from "astro:assets";
+---
+
+<header class="header">
+  <nav class="nav">
+    <ul class="nav__list">
+      <li>
+        <NavLink href="#listen">Listen</NavLink>
+      </li>
+      <li>
+        <NavLink href="#about">About</NavLink>
+      </li>
+      <li class="nav__item--logo">
+        <Image
+          alt="Killer Of Giants EP"
+          src={imageOne}
+          width={200}
+          height={200}
+          loading="eager"
+          decoding="sync"
+          class="nav__logo"
+          quality={100}
+        />
+        <Image
+          alt="Killer Of Giants EP"
+          src={imageTwo}
+          style={{ opacity: 0 }}
+          width={200}
+          height={200}
+          loading="eager"
+          decoding="sync"
+          class="nav__logo"
+          quality={100}
+        />
+        <Image
+          alt="Killer Of Giants EP"
+          src={imageThree}
+          style={{ opacity: 0 }}
+          width={200}
+          height={200}
+          loading="eager"
+          decoding="sync"
+          class="nav__logo"
+          quality={100}
+        />
+        <Image
+          alt="Killer Of Giants EP"
+          src={imageFour}
+          style={{ opacity: 0 }}
+          width={200}
+          height={200}
+          loading="eager"
+          decoding="sync"
+          class="nav__logo"
+          quality={100}
+        />
+        <Image
+          alt="Killer Of Giants EP"
+          src={imageFive}
+          style={{ opacity: 0 }}
+          width={200}
+          height={200}
+          loading="eager"
+          decoding="sync"
+          class="nav__logo"
+          quality={100}
+        />
+      </li>
+      <li>
+        <NavLink href="#download">Download</NavLink>
+      </li>
+      <li>
+        <NavLink href="#gallery">Gallery</NavLink>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .header {
+    max-width: var(--container-wide);
+    padding: 1.5rem var(--step-2) 0 var(--step-2);
+    margin: 0 auto;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: var(--step-4);
+    text-align: center;
+    font-family: var(--font-title);
+
+    align-items: center;
+  }
+
+  .nav__item--logo {
+    display: none;
+    position: relative;
+    min-height: var(--step-9);
+  }
+
+  @media screen and (min-width: 760px) {
+    .header {
+      padding: 1.5rem var(--step-2);
+    }
+    .nav__item--logo {
+      display: block;
+    }
+
+    .nav__list {
+      display: grid;
+      justify-content: center;
+      gap: var(--step-2);
+      grid-template-columns: 1fr 1fr var(--step-9) 1fr 1fr;
+    }
+  }
+
+  .nav__logo {
+    max-width: var(--step-9);
+    position: absolute;
+    transition: opacity 0.5s 0.2s ease-in-out;
+  }
+</style>

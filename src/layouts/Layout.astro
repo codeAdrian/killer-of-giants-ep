@@ -1,0 +1,149 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Killer Of Giants EP" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=New+Rocker&family=Yatra+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="root">
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
+<style is:global>
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  #root,
+  #__next {
+    isolation: isolate;
+  }
+
+  :root {
+    --font-body: "Yatra One", system-ui;
+    --font-title: "New Rocker", system-ui;
+    --color-background: #040404;
+    --color-text: #e0e0e0;
+    --color-cta: #a72928;
+  }
+
+  /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1100,24,1.25,9,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+  :root {
+    /* Step -1: 13.3333px → 19.2px */
+    --step--1: clamp(0.8333rem, 0.6829rem + 0.7521vw, 1.2rem);
+    /* Step 0: 16px → 24px */
+    --step-0: clamp(1rem, 0.7949rem + 1.0256vw, 1.5rem);
+    /* Step 1: 19.2px → 30px */
+    --step-1: clamp(1.2rem, 0.9231rem + 1.3846vw, 1.875rem);
+    /* Step 2: 23.04px → 37.5px */
+    --step-2: clamp(1.44rem, 1.0692rem + 1.8538vw, 2.3438rem);
+    /* Step 3: 27.648px → 46.875px */
+    --step-3: clamp(1.728rem, 1.235rem + 2.465vw, 2.9297rem);
+    /* Step 4: 33.1776px → 58.5938px */
+    --step-4: clamp(2.0736rem, 1.4219rem + 3.2585vw, 3.6621rem);
+    /* Step 5: 39.8131px → 73.2422px */
+    --step-5: clamp(2.4883rem, 1.6312rem + 4.2858vw, 4.5776rem);
+    /* Step 6: 47.7757px → 91.5527px */
+    --step-6: clamp(2.986rem, 1.8635rem + 5.6124vw, 5.722rem);
+    /* Step 7: 57.3309px → 114.4409px */
+    --step-7: clamp(3.5832rem, 2.1188rem + 7.3218vw, 7.1526rem);
+    /* Step 8: 68.7971px → 143.0511px */
+    --step-8: clamp(4.2998rem, 2.3959rem + 9.5198vw, 8.9407rem);
+    /* Step 9: 82.5565px → 178.8139px */
+    --step-9: clamp(5.1598rem, 2.6916rem + 12.3407vw, 11.1759rem);
+  }
+
+  :root {
+    --container-wide: calc((1100 / 16) * 1rem);
+  }
+
+  html {
+    font-weight: 400;
+    font-style: normal;
+    background: var(--color-background);
+    color: var(--color-text);
+    min-height: 100dvh;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-size: var(--step-0);
+    font-family: var(--font-body);
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  a,
+  a:visited {
+    color: var(--color-cta);
+    text-decoration: none;
+  }
+</style>

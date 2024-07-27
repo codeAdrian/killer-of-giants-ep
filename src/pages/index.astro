@@ -1,0 +1,24 @@
+---
+import About from "../sections/About.astro";
+import Listen from "../sections/Listen.astro";
+import Layout from "../layouts/Layout.astro";
+import Download from "../sections/Download.astro";
+import ArtGallery from "../sections/ArtGallery.astro";
+---
+
+<Layout title="Killer Of Giants EP">
+  <main class="layout">
+    <Listen />
+    <About />
+    <Download />
+    <ArtGallery />
+  </main>
+</Layout>
+
+<style>
+  .layout {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+</style>

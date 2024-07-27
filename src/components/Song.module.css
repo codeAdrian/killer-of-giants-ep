@@ -1,0 +1,42 @@
+.song {
+  display: flex;
+  gap: var(--step-0);
+  align-items: center;
+  border: 0.25rem solid var(--color-cta);
+  border-left-width: 0;
+  border-right-width: 0;
+  justify-content: space-between;
+}
+
+.songTitle {
+  display: flex;
+  gap: var(--step--1);
+  font-size: var(--step-1);
+  align-items: center;
+  line-height: 1;
+  flex-grow: 1;
+}
+
+.songIndex {
+  flex: 0 0 var(--step-4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  font-family: var(--font-title);
+  background-color: var(--color-cta);
+  font-size: var(--step-1);
+}
+
+.songButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: var(--color-cta);
+  border-width: 0;
+  color: var(--color-text);
+  text-align: center;
+  aspect-ratio: 1;
+  cursor: pointer;
+}

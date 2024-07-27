@@ -1,0 +1,89 @@
+---
+import NavLink from "./NavLink.astro";
+import imageOne from "../assets/graphics/1.png";
+import imageTwo from "../assets/graphics/2.png";
+import imageThree from "../assets/graphics/3.png";
+import imageFour from "../assets/graphics/4.png";
+import imageFive from "../assets/graphics/5.png";
+import { Image } from "astro:assets";
+---
+
+<footer class="footer">
+  <p>Per aspera ad astra</p>
+  <ul class="footer__grid">
+    <li>
+      <Image
+        alt=""
+        src={imageOne}
+        width={120}
+        height={120}
+        loading="lazy"
+        decoding="async"
+        quality={100}
+      />
+    </li>
+    <li>
+      <Image
+        alt=""
+        src={imageTwo}
+        width={120}
+        height={120}
+        loading="lazy"
+        decoding="async"
+        quality={100}
+      />
+    </li>
+    <li>
+      <Image
+        alt=""
+        src={imageThree}
+        width={120}
+        height={120}
+        loading="lazy"
+        decoding="async"
+        quality={100}
+      />
+    </li>
+    <li>
+      <Image
+        alt=""
+        src={imageFour}
+        width={120}
+        height={120}
+        loading="lazy"
+        decoding="async"
+        quality={100}
+      />
+    </li>
+    <li>
+      <Image
+        alt=""
+        src={imageFive}
+        width={120}
+        height={120}
+        loading="lazy"
+        decoding="async"
+        quality={100}
+      />
+    </li>
+  </ul>
+</footer>
+
+<style>
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 0.2rem solid var(--color-cta);
+    padding: 2rem var(--step-2);
+    gap: 1rem;
+  }
+
+  .footer__grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: var(--step-0);
+  }
+</style>

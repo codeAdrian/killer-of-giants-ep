@@ -1,0 +1,99 @@
+---
+import { Image } from "astro:assets";
+import coverOne from "../assets/album/1.jpg";
+import coverTwo from "../assets/album/2.jpg";
+import coverThree from "../assets/album/3.jpg";
+import coverFour from "../assets/album/4.jpg";
+import coverFive from "../assets/album/5.jpg";
+
+import Playlist from "../components/Playlist";
+---
+
+<section id="listen" class="listen">
+  <figure class="listen__images">
+    <Image
+      class="listen__image"
+      alt="Killer Of Giants EP cover art"
+      src={coverOne}
+      width={600}
+      loading="eager"
+      decoding="sync"
+      height={600}
+      quality={80}
+    />
+    <Image
+      alt="Killer Of Giants EP cover art"
+      class="listen__image"
+      style="opacity:0"
+      src={coverTwo}
+      width={600}
+      loading="eager"
+      decoding="sync"
+      height={600}
+      quality={80}
+    />
+    <Image
+      alt="Killer Of Giants EP cover art"
+      class="listen__image"
+      style="opacity:0"
+      src={coverThree}
+      width={600}
+      loading="eager"
+      decoding="sync"
+      height={600}
+      quality={80}
+    />
+    <Image
+      alt="Killer Of Giants EP cover art"
+      class="listen__image"
+      style="opacity:0"
+      src={coverFour}
+      width={600}
+      loading="eager"
+      decoding="sync"
+      height={600}
+      quality={80}
+    />
+    <Image
+      alt="Killer Of Giants EP cover art"
+      class="listen__image"
+      style="opacity:0"
+      src={coverFive}
+      width={600}
+      loading="eager"
+      decoding="sync"
+      height={600}
+      quality={80}
+    />
+  </figure>
+
+  <Playlist client:load />
+</section>
+
+<style>
+  .listen {
+    padding: 0 var(--step-2);
+    display: grid;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    gap: var(--step-3);
+  }
+
+  .listen__images {
+    position: relative;
+    aspect-ratio: 1;
+  }
+
+  .listen__image {
+    position: absolute;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  @media screen and (min-width: 1080px) {
+    .listen {
+      grid-template-columns: 430px auto;
+      max-width: var(--container-wide);
+    }
+  }
+</style>
