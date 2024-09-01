@@ -40,3 +40,8 @@
   aspect-ratio: 1;
   cursor: pointer;
 }
+
+.song:has(.songButton:hover),
+.song:has(.songButton:focus-visible) {
+  opacity: 0.75;
+}

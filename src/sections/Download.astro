@@ -1,14 +1,18 @@
 <section class="download" id="download">
   <h2 class="download__title">Get the EP</h2>
-  <p>Coming September 2024</p>
-  {
-    /*
+
   <article id="download" class="download__links">
-    <a class="download__link" href="#TODO">Download MP3</a>
-    <a class="download__link" href="#TODO">Download WAV</a>
-  </article>  
-  */
-  }
+    <a
+      class="download__link"
+      download="killer-of-giants-ep-mp3"
+      href="/download/killer-of-giants-ep-mp3.zip">Download MP3</a
+    >
+    <a
+      class="download__link"
+      download="killer-of-giants-ep-wav"
+      href="/download/killer-of-giants-ep-wav.zip">Download WAV</a
+    >
+  </article>
 </section>
 
 <style>
@@ -40,5 +44,10 @@
     padding: 1rem var(--step-3);
     background-color: var(--color-cta);
     color: var(--color-text);
+  }
+
+  .download__link:hover,
+  .download__link:focus-visible {
+    opacity: 0.75;
   }
 </style>
