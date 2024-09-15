@@ -1,45 +1,96 @@
 ---
 // Default theme
-// import "@splidejs/splide/css";
+import "@splidejs/splide/css";
+import { Image } from "astro:assets";
+import coverOne from "../assets/album/1.jpg";
+import coverTwo from "../assets/album/2.jpg";
+import coverThree from "../assets/album/3.jpg";
+import coverFour from "../assets/album/4.jpg";
+import coverFive from "../assets/album/5.jpg";
 ---
-
-{
-  /*
-<section class="splide">
-  <h2>Splide Basic HTML Example</h2>
-  <div class="splide__track">
-    <ul class="splide__list">
-      <li class="splide__slide">Slide 01</li>
-      <li class="splide__slide">Slide 02</li>
-      <li class="splide__slide">Slide 03</li>
-      <li class="splide__slide">Slide 04</li>
-      <li class="splide__slide">Slide 05</li>
-      <li class="splide__slide">Slide 06</li>
-      <li class="splide__slide">Slide 07</li>
-      <li class="splide__slide">Slide 08</li>
-      <li class="splide__slide">Slide 09</li>
-    </ul>
-  </div>
-</section>
-*/
-}
-
-{
-  /*
-<script>
-  import Splide from "@splidejs/splide";
-
-  var splide = new Splide(".splide");
-  splide.mount();
-</script>
-
-*/
-}
 
 <section id="gallery" class="gallery">
   <h2 class="gallery__title">Artwork gallery</h2>
-  <p>Coming September 2024</p>
+  <article class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <Image
+            class="listen__image"
+            alt="Killer Of Giants EP cover art"
+            src={coverOne}
+            width={1024}
+            loading="lazy"
+            decoding="async"
+            height={1024}
+            quality={80}
+          />
+        </li>
+        <li class="splide__slide">
+          <Image
+            class="listen__image"
+            alt="Killer Of Giants EP cover art"
+            src={coverTwo}
+            width={1024}
+            loading="lazy"
+            decoding="async"
+            height={1024}
+            quality={80}
+          />
+        </li>
+        <li class="splide__slide">
+          <Image
+            class="listen__image"
+            alt="Killer Of Giants EP cover art"
+            src={coverThree}
+            width={1024}
+            loading="lazy"
+            decoding="async"
+            height={1024}
+            quality={80}
+          />
+        </li>
+        <li class="splide__slide">
+          <Image
+            class="listen__image"
+            alt="Killer Of Giants EP cover art"
+            src={coverFour}
+            width={1024}
+            loading="lazy"
+            decoding="async"
+            height={1024}
+            quality={80}
+          />
+        </li>
+        <li class="splide__slide">
+          <Image
+            class="listen__image"
+            alt="Killer Of Giants EP cover art"
+            src={coverFive}
+            width={1024}
+            loading="lazy"
+            decoding="async"
+            height={1024}
+            quality={80}
+          />
+        </li>
+      </ul>
+    </div>
+  </article>
 </section>
+
+<script>
+  import Splide from "@splidejs/splide";
+
+  var splide = new Splide(".splide", {
+    pagination: false,
+    type: "fade",
+    speed: 800,
+    rewind: true,
+    easing: "ease",
+  });
+  splide.mount();
+</script>
 
 <style>
   .gallery {
@@ -55,5 +106,12 @@
     margin-bottom: 2rem;
     padding-bottom: 0.1rem;
     border-bottom: 0.2rem solid var(--color-cta);
+  }
+</style>
+
+<style is:global>
+  .splide {
+    max-width: 768px;
+    padding-bottom: var(--step-1);
   }
 </style>
